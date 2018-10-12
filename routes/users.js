@@ -21,4 +21,14 @@ router.post('/addspace', function(req, res) {
   });
 });
 
+/* DELETE to deletespace. */
+router.delete('/deletespace/:id', function(req, res) {
+  var db = req.db;
+  var collection = db.get('spaceList');
+  var spaceToDelete = req.params.id;
+  collection.remove({ '_id' : spaceToDelete }, function(err) {
+    res.send((err === null) ? { msg: '' } : { msg:'error: ' + err });
+  });
+});
+
 module.exports = router;
