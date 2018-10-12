@@ -1,0 +1,15 @@
+extends layout
+
+block content
+h1 = title
+h3 Create your profile
+    P
+  form#formSignUp(name="signup",method="post",action="/signup")
+    input#inputUserName(type="text", placeholder="username", name="username")
+    input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+    input#inputPassword(type='text', placeholder='password')
+    button#btnSubmit(type="submit") submit
+    
+    
+    
+    

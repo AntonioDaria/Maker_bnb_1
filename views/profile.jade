@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  h1= title1
+  p Welcome to your profile
+  
+// Wrapper
+#wrapper
+
+  // USER INFO
+  #spaceInfo
+    h2 Space Info
+    p
+      strong Name:
+      |  <span id='spaceInfoName'></span>
+      br
+      strong Description:
+      |  <span id='spaceInfoDescription'></span>
+      br
+      strong Price:
+      |  <span id='spaceInfoPrice'></span>
+  // /Space INFO
+
+  // Space LIST
+  h2 Space List
+  #spaceList
+    table
+      thead
+        th Name
+        th Description
+        th Price
+        th
+      tbody
+  // /Space LIST
+
+  // ADD Space
+  h2 Add Space
+  #addSpace
+    fieldset
+      input#inputSpaceName(type='text', placeholder='Name')
+      input#inputSpaceDescription(type='text', placeholder='Description')
+      br
+      input#inputSpacePrice(type='text', placeholder='Price')
+      P
+      button#btnAddSpace Add Space
+  // /ADD USER
+
+// /WRAPPER
